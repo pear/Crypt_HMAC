@@ -19,22 +19,26 @@
     </maintainer>
   </maintainers>
   <release>
-    <version>1.0</version>
-    <date>2005-02-18</date>
+    <version>1.0.1</version>
+    <date>2005-02-20</date>
     <license>PHP</license>
     <state>stable</state>
-    <notes>* Fixed bug #2524
-* Added setKey() method
-* Added setFunction method
-* Updated to follow new header comment block coding standard</notes>
+    <notes>* Fixed bug #3531</notes>
     <filelist>
       <file role="test" baseinstalldir="Crypt" md5sum="da348c47cb9000517a6d15a355f3a47c" name="tests/test.php"/>
-      <file role="php" baseinstalldir="Crypt" md5sum="d900cd54dcacf4c54284b9a83eec8185" name="HMAC.php"/>
+      <file role="php" baseinstalldir="Crypt" md5sum="416ea2649cd36d8ada78c6cb2836b8b8" name="HMAC.php"/>
     </filelist>
   </release>
   <changelog>
     <release>
-      <version>1.0</version>
+      <version>1.0.1</version>
+      <date>2005-02-20</date>
+      <license>PHP</license>
+      <state>stable</state>
+      <notes>* Fixed bug #3531</notes>
+      </release>
+    <release>
+      <version>1.0.0</version>
       <date>2005-02-18</date>
       <license>PHP</license>
       <state>stable</state>
