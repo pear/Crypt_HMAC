@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE package SYSTEM "../package.dtd">
+<!-- do not use the "Type" attribute here, that one is only for
+     generated package.xml files -->
+<package version="1.0">
+  <name>Crypt_HMAC</name>
+  <summary>
+    A class to calculate RFC 2104 compliant hashes.
+  </summary>
+  <description>
+    A class to calculate RFC 2104 compliant hashes.
+  </description>
+  <maintainers>
+    <maintainer>
+      <user>derick</user>
+      <name>Derick Rethans</name>
+      <email>d.rethans@jdimedia.nl</email>
+    </maintainer>
+  </maintainers>
+  <release>
+    <version>0.9</version>
+    <state>beta</state>
+    <license>BSD</license>
+    <date>2003-02-16</date>
+    <notes>
+      Initial release
+    </notes>
+    <filelist>
+      <dir name="/" baseinstalldir="Crypt">
+        <dir name="tests">
+          <file role="test">test.php</file>
+        </dir>
+        <file role="php">HMAC.php</file>
+      </dir>
+    </filelist>
+  </release>
+</package>
