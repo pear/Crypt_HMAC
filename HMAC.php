@@ -115,7 +115,14 @@ class Crypt_HMAC
         * Pad the key as the RFC wishes
         */
         $func = $this->_func;
-        $key = (strlen($key) > 64) ? pack($this->_pack, $func($key)) : str_pad($key, 64, chr(0));
+        
+        if (strlen($key) > 64) {
+           $key =  pack($this->_pack, $func($key));
+        }
+        if (strlen($key) < 64) {
+            $key = str_pad($key, 64, chr(0));
+        }
+        
 
         /* Calculate the padded keys and save them */
         $this->_ipad = (substr($key, 0, 64) ^ str_repeat(chr(0x36), 64));
