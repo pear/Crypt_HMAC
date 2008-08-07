@@ -104,6 +104,8 @@ class Crypt_HMAC
     
     /**
     * Sets key to use with hash
+    * 
+    * NOTE: setFunction must be called before setKey
     *
     * @param string $key
     * @return void
@@ -147,13 +149,18 @@ class Crypt_HMAC
     /**
     * Hashing function
     *
-    * @param  string $data  string that will encrypted
+    * @param  string $data          string that will encrypted
+    * @param  bool   $rawOutput     if true, digest is returned in raw binary format
     * @return string
     * @access public
     */
-    function hash($data)
+    function hash($data, $rawOutput = false)
     {
         $func = $this->_func;
+        if ($rawOutput) {
+            return pack('H*', $func($this->_opad . pack($this->_pack,
+$func($this->_ipad . $data))));
+        }
         return $func($this->_opad . pack($this->_pack, $func($this->_ipad . $data)));
     }
 
