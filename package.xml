@@ -42,7 +42,9 @@ http://pear.php.net/dtd/package-2.0.xsd">
  <contents>
   <dir name="/">
    <dir name="tests">
-    <file baseinstalldir="Crypt" md5sum="da348c47cb9000517a6d15a355f3a47c" name="test.php" role="test" />
+    <file baseinstalldir="Crypt" md5sum="6ab44a45f6c82f9eb47010e0e17239e6" name="vector1.phpt" role="test" />
+    <file baseinstalldir="Crypt" md5sum="e35e89f255b787389825d78894aba401" name="vector2.phpt" role="test" />
+    <file baseinstalldir="Crypt" md5sum="716b5b7aa2827f573b33c945036e2181" name="vector3.phpt" role="test" />
    </dir> <!-- //tests -->
    <file baseinstalldir="Crypt" md5sum="416ea2649cd36d8ada78c6cb2836b8b8" name="HMAC.php" role="php" />
   </dir> <!-- / -->
