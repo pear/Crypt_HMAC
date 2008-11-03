@@ -143,7 +143,11 @@ class Crypt_HMAC
      */
     function _getPackFormat($func)
     {
-        $packs = array('md5' => 'H32', 'sha1' => 'H40');
+        $packs = array(
+            'md5'  => 'H32',
+            'sha1' => 'H40'
+        );
+
         return isset($packs[$func]) ? $packs[$func] : false;
     }
 
@@ -160,13 +164,24 @@ class Crypt_HMAC
      */
     function hash($data, $rawOutput = false)
     {
-        $func = $this->_func;
-        if ($rawOutput) {
-            return pack('H*', $func($this->_opad . pack($this->_pack,
-                $func($this->_ipad . $data))));
+        $hash = $this->_opad . pack($this->_pack, $func($this->_ipad . $data));
+
+        switch ($this->_func) {
+        case 'sha1':
+            $hash = sha1($hash);
+            break;
+
+        default:
+        case 'md5':
+            $hash = md5($hash);
+            break;
         }
-        return $func($this->_opad . pack($this->_pack,
-            $func($this->_ipad . $data)));
+
+        if ($rawOutput) {
+            $hash = pack('H*', $hash);
+        }
+
+        return $hash;
     }
 }
 
