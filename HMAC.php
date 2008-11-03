@@ -164,7 +164,18 @@ class Crypt_HMAC
      */
     function hash($data, $rawOutput = false)
     {
-        $hash = $this->_opad . pack($this->_pack, $func($this->_ipad . $data));
+        switch ($this->_func) {
+        case 'sha1':
+            $hash = sha1($this->_ipad . $data);
+            break;
+
+        default:
+        case 'md5':
+            $hash = md5($this->_ipad . $data);
+            break;
+        }
+
+        $hash = $this->_opad . pack($this->_pack, $hash);
 
         switch ($this->_func) {
         case 'sha1':
