@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.7.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-http://pear.php.net/dtd/tasks-1.0.xsd
-http://pear.php.net/dtd/package-2.0
-http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
  <name>Crypt_HMAC</name>
  <channel>pear.php.net</channel>
  <summary>A class to calculate RFC 2104 compliant hashes.</summary>
- <description>A class to calculate RFC 2104 compliant hashes.
- </description>
+ <description>A class to calculate RFC 2104 compliant hashes.</description>
  <lead>
   <name>Derick Rethans</name>
   <user>derick</user>
@@ -26,8 +22,8 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>mike@silverorange.com</email>
   <active>yes</active>
  </developer>
- <date>2008-11-03</date>
- <time>12:10:13</time>
+ <date>2010-02-21</date>
+ <time>23:51:23</time>
  <version>
   <release>1.0.1</release>
   <api>1.0.1</api>
@@ -37,17 +33,16 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <api>stable</api>
  </stability>
  <license uri="http://www.php.net/license">PHP</license>
- <notes>* Fixed bug #3531
+ <notes>
+* Fixed bug #3531
  </notes>
  <contents>
-  <dir name="/">
-   <dir name="tests">
-    <file baseinstalldir="Crypt" md5sum="6ab44a45f6c82f9eb47010e0e17239e6" name="vector1.phpt" role="test" />
-    <file baseinstalldir="Crypt" md5sum="e35e89f255b787389825d78894aba401" name="vector2.phpt" role="test" />
-    <file baseinstalldir="Crypt" md5sum="716b5b7aa2827f573b33c945036e2181" name="vector3.phpt" role="test" />
-   </dir> <!-- //tests -->
-   <file baseinstalldir="Crypt" md5sum="8fb702e90be347ed77353a9d56672431" name="HMAC.php" role="php" />
-  </dir> <!-- / -->
+  <dir baseinstalldir="/" name="/">
+   <file baseinstalldir="/" md5sum="9484ae499b6a570fee04c8d51f0b35b0" name="Crypt/HMAC.php" role="php" />
+   <file baseinstalldir="Crypt" md5sum="bbb944399fe0d7e29732087332c497d3" name="tests/vector1.phpt" role="test" />
+   <file baseinstalldir="Crypt" md5sum="d6c43312580f4564aaf18468f98d6fda" name="tests/vector2.phpt" role="test" />
+   <file baseinstalldir="Crypt" md5sum="a03c62097ed8000923225bc77035913a" name="tests/vector3.phpt" role="test" />
+  </dir>
  </contents>
  <dependencies>
   <required>
@@ -63,16 +58,17 @@ http://pear.php.net/dtd/package-2.0.xsd">
  <changelog>
   <release>
    <version>
-    <release>1.0.1</release>
-    <api>1.0.1</api>
+    <release>0.9</release>
+    <api>0.9</api>
    </version>
    <stability>
-    <release>stable</release>
-    <api>stable</api>
+    <release>beta</release>
+    <api>beta</api>
    </stability>
-   <date>2005-02-20</date>
+   <date>2003-02-16</date>
    <license uri="http://www.php.net/license">PHP</license>
-   <notes>* Fixed bug #3531
+   <notes>
+Initial release
    </notes>
   </release>
   <release>
@@ -86,26 +82,26 @@ http://pear.php.net/dtd/package-2.0.xsd">
    </stability>
    <date>2005-02-18</date>
    <license uri="http://www.php.net/license">PHP</license>
-   <notes>* Fixed bug #2524
+   <notes>
+* Fixed bug #2524
 * Added setKey() method
 * Added setFunction() method
 * Updated to follow new header comment block coding standard
-
    </notes>
   </release>
   <release>
    <version>
-    <release>0.9</release>
-    <api>0.9</api>
+    <release>1.0.1</release>
+    <api>1.0.1</api>
    </version>
    <stability>
-    <release>beta</release>
-    <api>beta</api>
+    <release>stable</release>
+    <api>stable</api>
    </stability>
-   <date>2003-02-16</date>
+   <date>2010-02-21</date>
    <license uri="http://www.php.net/license">PHP</license>
-   <notes>Initial release
-
+   <notes>
+* Fixed bug #3531
    </notes>
   </release>
  </changelog>
