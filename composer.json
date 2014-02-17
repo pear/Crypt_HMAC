@@ -18,7 +18,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Crypt_HMAC": "./"
+            "Crypt": "./"
         }
     },
     "description": "More info available on: http://pear.php.net/package/Crypt_HMAC",
