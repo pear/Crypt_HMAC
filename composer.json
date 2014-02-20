@@ -1,0 +1,41 @@
+{
+    "authors": [
+        {
+            "email": "derick@php.net",
+            "name": "Derick Rethans",
+            "role": "Lead"
+        },
+        {
+            "email": "mfonda@dotgeek.org",
+            "name": "Matthew Fonda",
+            "role": "Lead"
+        },
+        {
+            "email": "mike@silverorange.com",
+            "name": "Michael Gauthier",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Crypt": "./"
+        }
+    },
+    "description": "More info available on: http://pear.php.net/package/Crypt_HMAC",
+    "include-path": [
+        "./"
+    ],
+    "license": "PHP",
+    "name": "pear/crypt_hmac",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Crypt_HMAC",
+        "source": "https://github.com/pear/Crypt_HMAC"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
